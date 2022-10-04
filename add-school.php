@@ -1,7 +1,52 @@
+<?php
+
+require_once("./config.php");
+require_once("./auxiliaries.php");
+
+if(isset($_POST['submit'])){
+    $schoolname = sterilize($_POST['schoolname']);
+    $schooladdress = sterilize($_POST['schooladdress']);
+    $schoolcontactaddress = sterilize($_POST['schoolcontactaddress']);
+    $headteachername = sterilize($_POST['headteachername']);
+    $schoolregion = sterilize($_POST['schoolregion']);
+    $schooldistrict = sterilize($_POST['schooldistrict']);
+
+    if(!empty($schoolname) && !empty($schooladdress) && !empty($schoolcontactaddress) && !empty($headteachername)
+     && !empty($schoolregion) && !empty( $schooldistrict)){
+           $sqlInsertSchool = "INSERT INTO basicschools(schoolname, schooladdress, schoolcontactaddress,
+            headteachername, schoolregion, schooldistrict) VALUES('$schoolname','$schooladdress',
+            '$schoolcontactaddress','$headteachername','$schoolregion','$schooldistrict')";
+           $statement = $conn->prepare($sqlInsertSchool);
+           $results = $statement->execute();
+           if($results){
+            $_SESSION['message'] = "Succcess!!";
+            $_SESSION['alert'] = "alert alert-success";
+           } else {
+            $_SESSION['message'] = "OOppss Sorry!! Something went wrong!!";
+            $_SESSION['alert'] = "alert alert-danger";
+           }
+    } else{
+        $_SESSION['message'] = "All Fields Are Required!!";
+        $_SESSION['alert'] = "alert alert-danger";
+    }
+}
+
+
+
+
+;?>
+
 <div class="main-panel">        
     <div class="content-wrapper">
+    <?php
+            if(isset($_SESSION['message'])):?>
+                <div class="<?= $_SESSION['alert'];?>"  role="alert">
+                    <strong><?= $_SESSION['message'];?></strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                 </div>
+        <?php endif;?>
       <div class="row">
-        <div class="col-md-12 grid-margin stretch-card">
+        <div class="col-md-6 grid-margin stretch-card">
           <div class="card">
             <div class="card-body">
               <h4 class="card-title">Add New School</h4>
@@ -33,7 +78,7 @@
                   <label for="exampleInputConfirmPassword1">District</label>
                   <input name="schooldistrict" type="text" class="form-control" id="exampleInputConfirmPassword1" placeholder="Password">
                 </div>
-                <button type="submit" class="btn btn-primary me-2">Submit</button>
+                <button name="submit" type="submit" class="btn btn-primary me-2">Submit</button>
                
               </form>
             </div>
