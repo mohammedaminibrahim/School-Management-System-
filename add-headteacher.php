@@ -48,16 +48,16 @@
       <form action="" method="POST" class="forms-sample">
         <div class="form-group">
           <label for="exampleInputUsername1">Full Name</label>
-          <input name="headmastername" type="text" class="form-control" id="exampleInputUsername1" placeholder="Full name">
+          <input name="headmastername" type="text" class="form-control" id="exampleInputUsername1" >
         </div>
         <div class="form-group">
           <label for="exampleInputEmail1">Contact Address</label>
-          <input name="headmasteraddress" type="text" class="form-control" id="exampleInputEmail1" placeholder="Contact Address">
+          <input name="headmasteraddress" type="text" class="form-control" id="exampleInputEmail1" >
         </div>
         <div class="form-group">
           <label for="exampleInputEmail1">School</label>
           <!-- <input name="schoolcontactaddress" type="email" class="form-control" id="exampleInputEmail1" placeholder="Email Address"> -->
-          <select name="headmasterschool" class="form-control" id="exampleInputEmail1" placeholder="Email Address">
+          <select name="headmasterschool" class="form-control" id="exampleInputEmail1" >
         
           
         
@@ -91,11 +91,11 @@
           </div>
         <div class="form-group">
           <label for="exampleInputPassword1">Email</label>
-          <input name="headmasteremail" type="text" class="form-control" id="exampleInputPassword1" placeholder="School">
+          <input name="headmasteremail" type="text" class="form-control" id="exampleInputPassword1" 
         </div>
         <div class="form-group">
           <label for="exampleInputPassword1">Region</label>
-          <input name="headmasterregion" type="text" class="form-control" id="exampleInputPassword1" placeholder="Region">
+          <input name="headmasterregion" type="text" class="form-control" id="exampleInputPassword1">
         </div>
         <button name="addmaster" type="submit" class="btn btn-primary me-2">Submit</button>
        

@@ -38,8 +38,8 @@
           <?php require_once("./includes/dashboard-ui.php");?>
           <?php require_once("./add-school.php");?>
              <?php require_once("./add-headteacher.php");?> 
-            <?php require_once("./includes/top-product-ui.php");?>
-         <?php require_once("./includes/detail-report-ui.php");?>
+            <?php //require_once("./includes/top-product-ui.php");?>
+         <?php //require_once("./includes/detail-report-ui.php");?>
           </div>
         </div>
         <!-- content-wrapper ends -->

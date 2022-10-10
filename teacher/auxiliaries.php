@@ -32,12 +32,6 @@ $results = $statement->execute();
 $NumberOfStudents = $statement->rowCount();
 
 
-//get number of students for a particular teacher
-$teacherclass = $_SESSION['teacherclass'];
-$sqlNumberOfStudentsForTeacher = "SELECT * FROM students WHERE studentclass = '$teacherclass'";
-$statement = $conn->prepare($sqlNumberOfStudentsForTeacher);
-$results = $statement->execute();
-$numberOfStudentsPerTeacher = $statement->rowCount();
 
 
 ;?>

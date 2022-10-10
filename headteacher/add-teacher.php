@@ -49,14 +49,15 @@ require_once("./includes/head-ui.php");?>
                                 ]);
                                 $rows = $statement->rowCount();
                                 $columns = $statement->fetchAll();
+                                $password = "12345678";
 
                                 if($rows > 0){
                                     $_SESSION['message'] = "Teacher Already Attended!";
                                     $_SESSION['alert'] = "alert alert-warning";
                                 } else{
                                    $sqlInsertTeacher = "INSERT INTO teachers(teacherfirstname, teacherlastname, teacherclass, teachergender,
-                                   teacheremail, teacherncontact, teacheraddress, teacherschool) 
-                                   VALUES(:teacherfirstname, :teacherlastname, :teacherclass, :teachergender, :teacheremail, :teacherncontact,
+                                   teacheremail, password, teacherncontact, teacheraddress, teacherschool) 
+                                   VALUES(:teacherfirstname, :teacherlastname, :teacherclass, :teachergender, :teacheremail, :password, :teacherncontact,
                                    :teacheraddress, :headmasterschool)";
                                    $statement = $conn->prepare($sqlInsertTeacher);
                                    $results = $statement->execute([
@@ -65,6 +66,7 @@ require_once("./includes/head-ui.php");?>
                                     ':teacherclass' => $teacherclass, 
                                     ':teachergender' => $teachergender, 
                                    ':teacheremail' => $teacheremail, 
+                                    ':password' => $password,
                                     ':teacherncontact' => $teacherncontact,
                                     ':teacheraddress' => $teacheraddress,
                                     ':headmasterschool' => $headmasterschool

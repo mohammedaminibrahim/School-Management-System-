@@ -14,6 +14,12 @@
             </a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="././attendance.php">
+              <i class="ti-pie-chart menu-icon"></i>
+              <span class="menu-title">View Student</span>
+            </a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="././view-attendance.php">
               <i class="ti-view-list-alt menu-icon"></i>
               <span class="menu-title">View Attandace</span>

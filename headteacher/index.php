@@ -106,9 +106,9 @@
                       <button id="exampleModalXlLabel" type="button" class="btn btn-primary btn-icon-text btn-rounded modal-title h4" data-coreui-toggle="modal" data-coreui-target="#exampleModalXl">
                       <i class="ti-clipboard btn-icon-prepend"></i>Add Students
                     </button>
-                    <button id="exampleModalXlLabelTeacher" type="button" class="btn btn-primary btn-icon-text btn-rounded modal-title h4" data-coreui-toggle="modal" data-coreui-target="#exampleModalXlLabelTeacher">
+                    <!-- <button id="exampleModalXlLabelTeacher" type="button" class="btn btn-primary btn-icon-text btn-rounded modal-title h4" data-coreui-toggle="modal" data-coreui-target="#exampleModalXlLabelTeacher">
                       <i class="ti-clipboard btn-icon-prepend"></i>Add Teachers
-                    </button>
+                    </button> -->
                         <div class="modal fade" id="exampleModalXl" tabindex="-1" aria-labelledby="exampleModalXlLabel" aria-hidden="true">
                           <div class="modal-dialog modal-xl">
                             <div class="modal-content">

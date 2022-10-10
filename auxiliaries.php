@@ -18,7 +18,7 @@ $NumberOfSchools = $statement->rowCount();
 
 
 //get number of headmaster
-$sqlNumberofheadmaster= "SELECT * FROM headmaster";
+$sqlNumberofheadmaster= "SELECT * FROM teachers";
 $statement = $conn->prepare($sqlNumberofheadmaster);
 $results = $statement->execute();
 $NumberOfHeadteachers = $statement->rowCount();
@@ -30,6 +30,13 @@ $sqlNumberofSchools = "SELECT * FROM basicschools";
 $statement = $conn->prepare($sqlNumberofSchools);
 $results = $statement->execute();
 $NumberOfStudents = $statement->rowCount();
+
+
+//get number of teachers
+$sqlNumberOfteachers = "SELECT * FROM teachers";
+$statement = $conn->prepare($sqlNumberOfteachers);
+$results = $statement->execute();
+$NumberOfteachers = $statement->rowCount();
 
 
 ;?>
